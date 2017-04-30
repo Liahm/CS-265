@@ -1,0 +1,42 @@
+Q1.1
+	i)Hide implementation details means to hide or make invisible the details
+to the user such that the implementations are there, but not visible and
+will not affect the users.
+	ii)Don't have functions that do the same task multiple times.
+	iii)You can do only what you can see.
+	iv)If my link to X website inside the webiste blinks whenever I hover
+over it, then every link should do the same.
+
+Q1.2
+Empty fields, max (char buf) is 200, max char* field is 20. Commas inside
+quotes line 21(I think? that's the line) (p=strtok(q, ",\n\r")... It would
+print q, follow by new line. Which would take out the "getLINE" part.
+
+Q1.3
+It's bigger now?(DON'T TAKE THAT SERIOUS PLEASE)
+Size of line and buf is not limited anymore.
+Additional functions were added such as endofline and reset.
+Multiple field separator support
+
+
+Q1.4
+Two CSV files can't be parse at the same time because only one of them
+exists at a time. Only one line variable exists such that parsin can't read
+from stdin.
+I like that one short function called csvnfield. It returns nfield. Isn't
+this function useless in a way?
+
+Q1.5
+It will allow to read from stdin, so yes.
+It also returns more reasonable values, int rather than pointers to
+position.
+I don't see any issues.
+
+Q1.6
+It hides implementation details, it choose a smal orthogonal set of
+primitives, it doesn't reach behind the users back and does the same thing
+everywhere.
+
+Q1.7
+Tried doin it, failed. 0 points for Q7
+

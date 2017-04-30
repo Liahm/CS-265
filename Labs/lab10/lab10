@@ -1,0 +1,16 @@
+First I have to say, happy holidays. Second, the tables are on the excel
+file.
+Q1
+Used data from example
+F(n) is going upwards to infinity so, w(f(n)
+F(n^3) is heading to 0, is o(f(n))
+f(n^2) is also heading to 0 is o(f(n))
+used f(log2(n)) It would stay on an average of 1.80E-5 until the ins.80000
+This hold the same for almost every number
+
+Q2
+F(n) has a cap at around 5.4e+3
+F(n^2) tends toward zero
+F(n^3) tends towards zero
+Using f(log2(n)) the number would be 3.44E+2 almost all tests.
+

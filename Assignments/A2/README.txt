@@ -1,0 +1,1 @@
+Had issues with Python with spacing, so I decided to use visual studio code and #{} to help me. I seems... bad, kinda. SORRY!

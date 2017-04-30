@@ -1,0 +1,49 @@
+<project>
+    <target name="clean">
+        <delete dir="build">
+		  </delete>
+    </target> 
+    <target name="compile">
+		<mkdir dir="build/classes"/>
+  	    <javac includeantruntime="false" srcdir="." destdir="build/classes"/>
+    </target> 
+
+     <target name="infix2Postfix">
+         <javac srcdir='./' includes='infix2Postfix.java'/>
+            <java classname='infix2Postfix'>
+                <arg value='${CLASSPATH}/input.infix'/>
+            </java>
+     </target>    
+     <target name="Operand">
+         <javac srcdir='./' includes='Operand.java'>
+             <java refid="Operand.class.path"/>
+         </javac>
+     </target>
+          <target name="Operator">
+         <javac srcdir='./' includes='Operator.java'>
+             <java refid="Operator.class.path"/>
+         </javac>
+     </target>
+          <target name="opType">
+         <javac srcdir='./' includes='opType.java'>
+             <java refid="opType.class.path"/>
+         </javac>
+     </target>
+          <target name="Token">
+         <javac srcdir='./' includes='Token.java'>
+             <java refid="Token.class.path"/>
+         </javac>
+     </target>
+     
+     <target name="create-doc">
+        <javadoc
+                destrdir="doc"
+                version="true"
+                author="yes"
+                use="true"
+                windowtitle="Infix To Postfix Calculator">
+            <fileset dir="." defaultexcludes="yes"/>
+         </javadoc>
+         <echo message="javadoc has been created"/>
+    </target>
+</project>

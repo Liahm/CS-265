@@ -1,0 +1,11 @@
+if [ $# -eq 0 ]; then
+	echo "Please provide three arguments in the format YYYY MM DD"
+fi
+
+date="$2/$3/$1" #Reformat the date
+
+array=$(grep -rl "^TimeStamp: $date" $ARCHIVE)
+for item in $array; do
+	val=${item##*/} #Shorter to message instead of entire filename
+	echo $val
+done

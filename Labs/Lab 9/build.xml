@@ -1,0 +1,47 @@
+<project name="test" default="run">
+     
+     <path id="gInt.class.path">
+         <!-- get your current classpath -->
+         <pathelement path='${CLASSPATH}'/>
+         <!-- add location of junit.jar -->
+         <pathelement location='/usr/share/java/junit4.jar'/>
+         <pathelement location='.'/>
+     </path>
+
+     <target name="run" depends='compile'>
+         <java classname='gInt'>
+             <classpath refid="gInt.class.path"/>
+         </java>
+         <!--<java classname='gInt'/>-->
+     </target>
+     
+     <target name="compile" depends='gInt'/>
+     
+     <target name="gInt">
+         <javac srcdir='./' includes='gInt.java' includeantruntime='false'/>
+         <!-- Not sure <javac srcdir='./'/> -->
+     </target>
+     
+     <target name="gIntTest">
+         <javac srcdir='./' includes='gIntTest.java' includeantruntime='false'>
+             <classpath refid="gInt.class.path"/>
+         </javac>
+     </target>
+     
+     <target name='test' depends='compile,gIntTest'>
+         <junit fork="yes">
+             <classpath refid="gInt.class.path"/>
+             <formatter type='plain'/>
+             <test name='gIntTest'/>
+         </junit>
+     </target>
+     
+     <target name="clean">
+         <delete>
+             <fileset dir=".">
+                 <include name="*.class"/>
+             </fileset>
+         </delete>
+     </target>
+
+</project>

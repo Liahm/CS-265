@@ -1,0 +1,55 @@
+Q1
+	1)List: It is a collection of items that consist of data and a point
+which points to the next item in the list.
+
+	2) Stack: It is ad ata structure in which items are inserted and removed
+in a last in, first out order.
+
+	3) Queue: It is a data structure in which items are inserted and removed
+in a first in, first out.
+
+	4) Dictionary: This is a data structure which holds a key and any
+satellite data associated with that given key.
+
+Q2
+	log2(n) times. As a bubary search would eliminate half of the items every
+check.
+
+Q3
+	A linear search will check every item in the array to see if it is the
+value being searchd for. So the max amounts is n times.
+
+Q4
+	Linear search would be better if it's searching for an unsorted list or
+if the item in search is the first/one of the firsts in the list(a number
+less than log2(n))
+
+Q5
+	*84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+37 82 27 63 73 27 75 55 45 8 *84* 93 98 93
+*37* 82 27 63 73 27 75 55 45 8	 84 	*93* 98 93
+27 27 8 *37* 82 63 73 75 55 45 	 84   *93* 98 93
+*27* 27 8   37   *82* 63 73 75 55 45   84   93   *98* 93
+8 *27* 27		37   63 73 75 55 45 *82*   84   93   93 *98*
+8   27   27   37   *63* 73 75 77 45   82   84   93   93   98
+8   27   27   37   45 *63* 73 75 77   82   84   93   93   98
+8   27   27   37   45   63   *73* 75 77   82   84   93   93   98
+8   27   27   37   45   63   73   *75* 77   82   84   93   93   98
+8   27   27   37   45   63   73   75   77   82   84   93   93   98
+
+Q6
+	L->3->24->06
+Q7
+	L ->[13,[28,[24,[3,None]]]]
+Q8
+	The difference in output is due to the pointer s being reinitialized and
+re-allocated 100 bytes of memory, while buffer remains unchanged and then
+copying the contents of buffer into s. The reason why the final set of
+output is different to the second set is because s is not being pointed
+directly at the buffer, so changing s will not change the contents of
+buffer.
+Q9
+Key - Value
+3 - [cos,86] ->[Bob, 38]
+4 - [Jaga,24]->[Kate,28]->[Nash,11]->[Vera,99]
+5 - [Jesse,78]

@@ -1,0 +1,88 @@
+Q1 Variable of true = 0 and variable of false = 1 which are the same as what
+they mean.
+
+Q2
+int IsSmaller(char *first, char *second) {
+	if(strcmp(first, second) < 1)
+		return 1l
+	else
+		return 0;
+	}
+
+Q3 I read it outloud, didn't make sense.
+
+Q4
+	a) if(c!= 'y' || c!= 'Y')
+			return;
+	b) if(length > BUFSIZE)
+			length = BUFSIZE;
+	c) flag = !flag;
+	d) quote = 0;
+			if(strcmp(*line, '"') == 0)
+				quyote = 1;
+	e) bit = (val & 1) ? : 0;
+
+Q5 The order of read method is unknown to us. Also the code is unclear due
+to the naming throughout the program.
+
+Q6 2 3
+
+Q7
+	a) if (!stty(stdin) && !istty(stdout) && !istty(stderr))
+	return 0;
+
+	b) return retval 
+	
+	c) 	for (k=0; k<4; k++) {
+			scanf("%lf", &dx);
+			x += dx;
+		}
+
+Q8
+	for (int count=0; count<total; count++) {
+		if (this.getName(count) == nametable.userName()) {
+			return (true);
+	}
+}
+
+Q9 There are no parenthesis around the variable 'c' inside the statement. And since 'c' occurs multiple times throughout the macro, it will be executed multiple times.
+
+Q10 
+#define METER_PER_FEET 0.3048
+#define FEET_PER_METER 3.2084
+#define FEET_PER_MILE 5280.0
+#define KILOMETER_PER_MILE 1.609344
+#define SQUARE_KM_PER_SQUARE_MILE 2.589988
+
+Q11
+1st - States that a void function returns a value. A void function shouldn't
+return any value.
+
+2nd - the % operator is used for mod 2 to find if even or not, but does not mention the 'MAX' variable.
+
+3rd - States that a message should be printed out, It feels that the comment
+is in an random area since there is no code above or belo or before the
+comment. It's unclear what it would print
+
+4th - A duplicate of the 5th comment.
+
+5th - Plus 1 to a line counter.
+
+6th - Same as 5th comment.
+
+-- Python Scripts --
+
+1) Submitted as s1.py
+
+2) Submitted as s2.py
+
+3) Submitted as id.py
+
+4) Submitted as id2.py
+
+5) Submitted as parsePhoneNrs.py  
+
+
+
+
+

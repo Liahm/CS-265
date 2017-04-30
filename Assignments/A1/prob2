@@ -1,0 +1,20 @@
+for d in $ARCHIVE/*; do
+	for f in $d/*; do
+		fullFile=${f##*/} #Get the entire fill name of a message
+			IFS='_' read -r fileName threadLength <<< "$fullFile"
+#Split the filename into messages
+			printf "%s\t%s\n" $fileName $threadLength >> temp
+#Format output to include spaces
+		done
+	done
+
+sort -k2 -nru temp -o temp #Sort the file storing the list of messages.
+
+longestThread=$(awk 'NR==1{print $2}' temp) #Determine the longest thread
+#by getting the thread length of the first record
+echo $longestThread #prints the longest thread
+
+awk -v var="$longestThread" '$2==var {print $1}' temp 
+#display all other threads that have the same length
+
+rm -rf temp #delete temporary files.

@@ -1,0 +1,10 @@
+for d in $ARCHIVE/*; do
+	directories=$((directories+1))
+		for f in $d/*; do
+			messages=$((messages+1))
+		done
+	done
+
+printf "%d\t%d\n" $directories $messages #Output with spaces to make it look
+#"classy"
+

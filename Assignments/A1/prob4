@@ -1,0 +1,15 @@
+egrep -rh '^To: ' $ARCHIVE/*  >> temp
+
+awk -F@ '{print $2}' temp | awk -F' ' '{print $1}' > temp2
+awk '{print tolower($0)}' temp2 > temp3 
+uniq -c temp3 > temp4 #Determine how many occurences of each hostname there are
+
+awk '!a[$0]++' temp4 > temp5
+sort -nr temp5 -o temp5
+awk '{printf "%s %s\n", $2, $1}' temp5 | column -t #Print list of all
+hostnames
+
+val=$(wc -l temp5 | cut -f1 -d' ') #Get total number of distinct hostnames
+echo "Total $val" $print the total value
+
+rm -rf temp temp2 temp3 temp4 temp5 #Delete temp files 

@@ -1,0 +1,36 @@
+8273:Rocky Raccoon:08.10.17:D:520.00
+
+1902:Nancy Magill:08.10.29:D:770
+
+8273:Rocky Raccoon:08.11.01:W:20.00
+
+1902:Nancy Magill:08.11.14:W:51
+
+8273:Rocky Raccoon:08.11.17:W:60.00
+
+5883:Rocky Raccoon:08.11.17:D:60.00
+
+4224:Penny Lane:08.11.28:W:20.00
+
+
+8273:Rocky Raccoon Balance of 440
+
+1902:Nancy Magill Balance of 719
+
+883:Rocky Raccoon Balance of 60
+
+4224:Penny Lane Balance of -20
+
+Steps:
+Find out how to coordinate the data so that it prints out correct data for correct users in a loop. So I can't hard code users.
+
+Find out how to do balance. - Half way
+(text_in_file[0].split(":",2)[2]) - contains YY.MM.DD, A CHAR, money. 
+If that char is D, then ADD
+If that char is W, then substract
+Return the equal.
+
+Find out how to do history.
+Data is given in YY.MM.DD, do a latest day on the bottom.
+
+Add the transactions into the history and total using the same format as YY.MM.DD(today), THAT ONE CHAR, money.

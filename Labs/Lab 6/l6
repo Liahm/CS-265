@@ -1,0 +1,83 @@
+Q1 
+	add() - adds a new prefix to a table and updates it.
+	addSuffix - adds a new suffix to the hash table.
+
+Q2
+	lookup() - searches for the prefix. If given a value of 1 as an argument,
+then a prefix is created. It returns a pointer to the current prefix or
+returns NULL if it doesn't exit.
+	It is called by generate() and add()
+
+Q3
+	Table.jpg attached.
+	a)It's = 3 pointers
+	b)a = 3 pointers
+	c)new = 3 pointers
+	d)dawn = 2 pointers
+
+Q4
+	The advantage is that each string is only allocated in the exact amount of memory that it needs.
+
+Q5
+	The drawback is that the memory has to be "shuffle" out of the pointers
+so that new information can be attached to the previous pointer.
+
+Q6
+void cleanup()
+{
+	State *sp = NULL;
+	State *temp = NULL;
+
+	for(int i = 0; i<NHASH; i++)
+	{
+		for(sp = statetab[i]; sp != NULL; sp = temp)
+		{
+			temp = sp->next;
+			free(sp);
+		}
+	}
+}
+
+Q7
+	Yes, it worked. It took me some time thinking about the second for loop.
+
+Q8
+	They were freed exactly once because once a prefix/suffix has been freed,
+the memory that was allocated to it is no longer accessible by the program,
+so if we attempted to free the string again an error would occur.
+
+Q9
+	The prefixes are stored in a deque or double ended queue. Storing it as a
+deque allows us to pop the first element and also add a new element to the
+end.
+
+Q10
+	A map
+
+Q11
+	As a vector of suffixes
+
+Q12
+	It ease us with the built in database that, for example, C doesn't have.
+So, I don't have to write 200 lines of database.
+
+Q13
+	A drawback is that there is less control over the implementation as there
+could be a redundant code that would mean that the performance in C++ would
+become slower.
+
+Q14
+	As a tuples
+
+Q15 
+	A dictionary
+	
+Q16
+	In a list
+
+Q17
+	All variables in Python are inherently objects and writing code in Python
+is generally easier because they are shorter.
+
+Q18 
+	C++ has better data structures compared to to C++.

@@ -1,0 +1,26 @@
+Q1
+	A segmenentation fault, core dumped happened.
+	A file called "core" appeared in my directory.
+
+Q2
+	No stack is given
+	(gbd) bt 
+	no stack.
+
+It may had bombed in the main function.
+
+Q3
+A. bug1.c doesn't compile. Added & before n to fix it.-passing by reference.
+B. bug2.c Compiles, but output was wrong, changed %d and %f position.
+C. bug3.c doesn't compile with in.bug3 again.
+Ran program in gdb.
+Changed the ++numLines in line 49 so it's added after the call.
+D. avg.c doesn't compile. Did the same as bug1.c to fix it. 
+E. can't compile both. Added a starting point for quicksort. Didn't work.
+
+Q4
+	The compiler can only detect syntax errors.
+Q5	
+	specific : compiler will catch the error
+	not specific: error will be thrown at run time.
+
