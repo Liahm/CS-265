@@ -1,1 +1,1 @@
-# CS-265
+# CS 265 class programs and labs
